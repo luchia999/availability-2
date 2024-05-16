@@ -1,18 +1,43 @@
-.button-btn {
+.closeModal {
+	position: absolute;
+	top: 30px;
+  width: 24px;
+	height: 24px;
+	opacity: 0.2;
+	cursor: pointer;
+  transition: opacity ease 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.closeModal::before,
+.closeModal::after {
+	content: '';
+	position: absolute;
+	top: 20px;
+  right: 8px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.closeModal::before {
+	transform: rotate(45deg);
+}
+
+.closeModal::after {
+	transform: rotate(-45deg);
+}
+
+.closeModal {
     display: inline-block;
-    padding: 15px;
+    padding: 20px;
     border: 0;
     background: #d21818;
-    color: #ffffff;
     cursor: pointer;
     border-radius: 4px;
 }
 
-.button-btn:hover{
-  padding: 15px;
-  border: 3px solid #034575;
-  background: #eee;
-  color: #222;
-  outline: none;
-  margin: 0;
-}
